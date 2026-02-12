@@ -22,6 +22,10 @@ export class TaskController {
   findById(@Param('id') id: string): TaskDto {
     return this.taskService.findById(id);
   }
+  @Get()
+  findAll() {
+    return this.taskService.findAll();
+  }
   @Put()
   update(@Body() task: TaskDto) {
     this.taskService.update(task);

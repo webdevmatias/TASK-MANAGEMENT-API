@@ -23,6 +23,10 @@ export class TaskService {
     );
   }
 
+  findAll() {
+    return this.tasks;
+  }
+
   update(task: TaskDto) {
     const index = this.tasks.findIndex((t) => t.id === task.id);
 
